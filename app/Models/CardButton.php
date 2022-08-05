@@ -19,4 +19,16 @@ class CardButton extends Model
         'button_icon_color',
         'button_image_path'
     ];
+
+    // Relationships
+
+    public function card()
+    {
+        return $this->belongsTo(Card::class, 'card_id');
+    }
+
+    public function ButtonType()
+    {
+        return $this->belongsTo(ButtonType::class, 'button_type_id');
+    }
 }

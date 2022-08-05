@@ -28,4 +28,16 @@ class Card extends Model
         'button_margin_bottom',
         'is_template'
     ];
+
+    // Relationships
+
+    public function backgroundImage()
+    {
+        return $this->belongsTo(BackgroundImage::class, 'background_id');
+    }
+
+    public function logoImage()
+    {
+        return $this->belongsTo(LogoImage::class, 'logo_id');
+    }
 }
